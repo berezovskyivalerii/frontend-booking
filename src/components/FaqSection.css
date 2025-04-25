@@ -58,6 +58,7 @@
     transform: translateY(-50%) rotate(45deg);
 }
 
+
 /* responsivity */
 @media (max-width: 640px) {
     .faq {
