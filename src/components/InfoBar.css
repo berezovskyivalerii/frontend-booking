@@ -1,0 +1,39 @@
+/* InfoBar */
+.infobar-container {
+    min-width: 208px;
+    height: 208px;
+    border-radius: 13px;
+    border: 1px solid #DDDDDD;
+}
+
+.infobar-content {
+    padding: 24px;
+    text-align: center;
+    text-align: center;
+}
+
+.infobar-content img {
+    width: 24px;
+    height: 24px;
+    margin-top: 20px;
+}
+
+.infobar-content p {
+    font-family: Nunito Sans;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 30px;
+    color: #717171;
+}
+
+@media (max-width: 480px) {
+    .infobar-container {
+        min-width: 189px;
+        height: 208px;
+        border-radius: 13px;
+        border: 1px solid #DDDDDD;
+    }
+
+}

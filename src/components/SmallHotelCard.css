@@ -1,0 +1,106 @@
+.hotel-card {
+    width: 272px;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+.hotel-image-container {
+    position: relative;
+    height: 248px;
+    overflow: hidden;
+    border-radius: 13px;
+    cursor: pointer;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hotel-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.hotel-favorite-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #717171CC;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.hotel-favorite-icon img {
+    width: 12px;
+    height: 12px;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: #ccc;
+    border-radius: 50%;
+}
+
+.dot.active {
+    background-color: #fff;
+}
+
+.hotel-info {
+    padding: 12px 0px;
+}
+
+.hotel-title {
+    cursor: pointer;
+    font-family: Nunito Sans;
+    font-weight: 600;
+    font-size: 16px;
+    color: #222222;
+}
+
+.hotel-stars {
+    color: #581ADB;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.hotel-distance {
+    font-family: Nunito Sans;
+    font-weight: 400;
+    font-size: 16px;
+    vertical-align: middle;
+    color: #717171;
+    margin-bottom: 6px;
+}
+
+.hotel-price {
+    font-family: Nunito Sans;
+    font-weight: 800;
+    font-size: 16px;
+}
+
+@media (max-width: 480px) {
+    .hotel-card {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}

@@ -1,0 +1,29 @@
+:root {
+    --purple: #5a1aff;
+    --gray-400: #7a7a7a;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+/* ===== FLEX-контейнер ===== */
+.comments__flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px 40px;
+    margin: 0 auto;
+}
+
+.review-card {
+    flex: 1 1 320px;
+    max-width: 1fr;
+}
+
+@media (max-width: 480px) {
+    .comments__flex {
+        gap: 24px;
+    }
+
+    .review-card {
+        flex-basis: 100%;
+    }
+}

@@ -1,0 +1,153 @@
+/* ----- Общий стиль шапки ----- */
+.header {
+    width: 100%;
+    background-color: #fff;
+    /* При желании можно изменить/убрать */
+}
+
+/* ----- Контейнер, выравнивающий элементы шапки ----- */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Заголовок слева, блоки справа */
+    max-width: 1760px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 5px 16px;
+    box-sizing: border-box;
+    height: 80px;
+}
+
+/* ----- Заголовок ----- */
+.title-header {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    margin: 0;
+}
+
+.title-header span {
+    color: #581ADB;
+    /* Подсветка слова "you." */
+}
+
+/* ----- Контейнер для всех правых элементов (Language, Register, Sign In, Account) ----- */
+.content-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* Расстояние между элементами */
+}
+
+/* Иконка языка */
+.language-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ----- Register-контейнер (десктопный) ----- */
+.register-container button {
+    width: 96px;
+    height: 32px;
+    border-radius: 30px;
+    padding: 8px 16px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    background-color: #fff;
+    border: 1px solid #DDDDDD;
+    cursor: pointer;
+}
+
+/* ----- Sign In-контейнер (десктопный) ----- */
+.sign-in-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #DDDDDD;
+    width: 90px;
+    height: 32px;
+    border-radius: 30px;
+    padding: 0px 14px;
+    cursor: pointer;
+}
+
+.sign-in-container p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+.sign-in-container img {
+    width: 24px;
+    height: 24px;
+    background-color: #717171;
+    border-radius: 50%;
+}
+
+/* ----- Account-контейнер (мобильный) ----- */
+.account-container {
+    display: none;
+    /* По умолчанию скрыт на десктопе */
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #DDDDDD;
+    border-radius: 30px;
+    padding: 4px 14px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    color: #000;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.account-container p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Кружок-бейдж/иконка для Account */
+.user-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+    border-radius: 50%;
+    background-color: #717171;
+    color: #fff;
+    font-size: 14px;
+}
+
+/* ======================================
+     Адаптив для iPhone 14 Pro Max
+     (и любых устройств <= 480px шириной)
+  ====================================== */
+@media (max-width: 480px) {
+
+    /* Делаем из flex-рядка - колонку */
+    .header-container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    /* Центрируем заголовок */
+    .title-header {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    /* В мобильном режиме скрываем Register и Sign In */
+    .register-container,
+    .sign-in-container {
+        display: none !important;
+    }
+
+    /* Показываем Account-контейнер */
+    .account-container {
+        display: flex !important;
+    }
+}

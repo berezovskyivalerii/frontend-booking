@@ -1,0 +1,35 @@
+
+/* Footer */
+.footer-container {
+    margin-top: 100px;
+    border-top: 1px solid #DDDDDD;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 48px;
+    padding: 61px 20px;
+    background-color: #fff;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    min-width: 160px;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: #717171;
+    transition: color 0.2s ease;
+    font-family: Nunito Sans;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.footer-column a:hover {
+    color: #000;
+}

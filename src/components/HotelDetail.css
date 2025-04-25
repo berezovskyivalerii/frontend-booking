@@ -1,0 +1,185 @@
+.hotel-detail {
+  display: flex;
+  gap: 32px;
+  font-family: Nunito Sans;
+  margin-top: 20px;
+}
+
+/* ========== ГАЛЕРЕЯ ========== */
+.hotel-detail__gallery {
+  flex: 2;
+}
+
+.hotel-detail__main {
+  position: relative;
+  width: 100%;
+  /* фиксируем соотношение сторон 16:9 */
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.hotel-detail__main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.nav--left {
+  left: 16px;
+  background-color: #717171CC;
+  opacity: 80%;
+  color: white;
+}
+
+.nav--right {
+  right: 16px;
+  background-color: #717171CC;
+  opacity: 80%;
+  color: white;
+}
+
+.hotel-detail__thumbs {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.hotel-detail__thumbs img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0.8;
+  border: 2px solid transparent;
+}
+
+.hotel-detail__thumbs img.active {
+  opacity: 1;
+  border-color: rebeccapurple;
+}
+
+/* ========== ИНФО-БЛОК ========== */
+.hotel-detail__info {
+  flex: 1.1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "header book"
+    "desc desc"
+    "tags tags"
+    "divider divider"
+    "comment comment";
+  gap: 16px;
+}
+
+.info__header {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info__price {
+  color: rebeccapurple;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  font-size: 32px;
+}
+
+.amount {
+  color: #581ADB;
+}
+
+.per-night {
+  font-family: Nunito Sans;
+  font-weight: 600;
+  font-size: 32px;
+  color: #717171;
+}
+
+.info__price .per-night {
+  margin-left: 4px;
+}
+
+.info__book {
+  grid-area: book;
+  align-self: start;
+  width: 181px;
+  height: 72px;
+  background: #581ADB;
+  color: white;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 0px #581ADB59;
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.info__location {
+  margin: 12px 0;
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  align-items: center;
+}
+
+.icon-marker {
+  color: rebeccapurple;
+  margin-right: 6px;
+}
+
+.info__desc {
+  grid-area: desc;
+  font-family: Nunito Sans;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #717171;
+}
+
+.info__tags {
+  grid-area: tags;
+  display: flex;
+  gap: 18px;
+}
+
+
+.tag {
+  gap: 3px;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+  color: #717171;
+}
+
+.tag svg {
+  margin-right: 6px;
+}
+
+/* разделитель */
+.info__divider {
+  grid-area: divider;
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 0;
+}
+
+.review-card {
+  grid-area: comment;
+}

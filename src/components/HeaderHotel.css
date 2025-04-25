@@ -1,0 +1,130 @@
+
+.header-hotel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    font-family: Nunito Sans;
+    position: relative;
+    margin-top: 20px;
+    border: 0;
+}
+
+/* Left side */
+.header-hotel__left {
+    display: flex;
+    gap: 22px;
+}
+
+.header-hotel__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    min-width: 72px;
+}
+
+.header-hotel__icon {
+    font-size: 20px;
+    color: #717171;
+}
+
+.header-hotel__label {
+    margin: 5px 0;
+    font-size: 16px;
+    vertical-align: middle;
+    color: #581ADB;
+    text-align: center;
+}
+
+.header-hotel__more {
+    font-size: 15px;
+    color: #581ADB;
+}
+
+/* Center */
+.header-hotel__center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header-hotel__stars {
+    display: flex;
+    color: #581ADB;
+    font-size: 14px;
+    margin-bottom: 4px;
+    gap: 10px;
+}
+
+.header-hotel__title {
+    margin: 0;
+    font-size: 35px;
+    color: #581ADB;
+}
+
+.header-hotel__phone {
+    margin-top: 5px;
+    font-size: 11px;
+    color: #717171;
+}
+
+/* Right side */
+.header-hotel__right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header-hotel__score {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #581ADB;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #581ADB;
+}
+
+.header-hotel__reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: right;
+}
+
+.header-hotel__reviews-label {
+    color: #717171;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.header-hotel__reviews-num {
+    color: #333;   
+    color: #717171;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.header-hotel__check {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 16px;
+    color: #581ADB;
+    cursor: pointer;
+}
+
+.header-hotel__arrow {
+    margin-left: 4px;
+    font-size: 16px;
+    margin-top: 6px;
+}

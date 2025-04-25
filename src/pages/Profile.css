@@ -1,0 +1,993 @@
+Header {
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.nav-container-profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.nav-element-container.active {
+    border: 1px solid #581ADB;
+}
+
+.nav-element-container.active img {
+    background-color: #581ADB;
+}
+
+.nav-element-container {
+    text-decoration: none;
+    border: 1px solid #DDDDDD;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 60px;
+    padding: 0px 10px 0px 16px;
+    gap: 16px;
+    align-items: center;
+    height: 32px;
+    cursor: pointer;
+    background-color: #FFFFFF;
+}
+
+.nav-element-container p {
+    font-family: Nunito Sans;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.nav-element-container img {
+    background-color: #717171;
+    padding: 3px;
+    border-radius: 50%;
+}
+
+.data-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+
+.left-side-container {
+    flex: 1 1 800px;
+    max-width: 800px;
+    border: 1px solid #DDDDDD;
+    border-radius: 13px;
+
+    box-shadow: 0px 4px 69px 0px #0000000D;
+    box-shadow: 0px 1px 8px 0px #00000014;
+}
+
+.user-view-data {
+    display: inline-block;
+    padding: 5px 23px;
+    vertical-align: top;
+}
+
+.profile-user-name {
+    font-family: Nunito Sans;
+    font-size: 20px;
+    color: #222222;
+    font-weight: 700;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.profile-user-name:focus {
+    outline: none;
+}
+
+.user-data-edit {
+    width: 145px;
+    height: 32px;
+    padding: 0px 10px 0px 16px;
+    border: 1px solid #DDDDDD;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-edit-photo-title {
+    font-family: Nunito Sans;
+    font-weight: 400;
+    font-size: 16px;
+    color: #717171;
+}
+
+.user-edit-photo-image {
+    cursor: pointer;
+}
+
+.title-profile {
+    font-family: Nunito Sans;
+    font-weight: 700;
+    font-size: 36px;
+    color: #581ADB;
+}
+
+.user-photo {
+    max-width: 272px;
+    border-radius: 13px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.right-side-container {
+    flex: 1 1 352px;
+    max-width: 352px;
+    border: 1px solid #DDDDDD;
+    border-radius: 13px;
+}
+
+.right-side-content {
+    font-family: Nunito Sans;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 30px 32px;
+    color: #717171;
+    margin-top: 10px;
+}
+
+/* Корневой контейнер */
+.buttom-full-width-container {
+    flex: 0 0 100%;
+    border: 1px solid #DDDDDD;
+    border-radius: 13px;
+    box-shadow: 0px 4px 69px 0px #0000000D;
+    box-shadow: 0px 1px 8px 0px #00000014;
+}
+
+.user-data-form {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.form-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 200px;
+}
+
+.form-input {
+    padding: 10px 10px 10px 16px;
+    border: 1px solid #ccc;
+    border-radius: 64px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+    height: 36px;
+    width: 228px;
+    font-family: Nunito Sans;
+    font-weight: 400;
+    font-size: 16px;
+    color: #717171;
+}
+
+.form-input:focus {
+    border-color: #999;
+}
+
+.form-select {
+    border: 1px solid #ccc;
+    border-radius: 64px;
+    font-size: 14px;
+    outline: none;
+    background-color: #fff;
+    cursor: pointer;
+    text-align: center;
+    font-family: Nunito Sans;
+    font-weight: 400;
+    font-size: 16px;
+    color: #717171;
+    width: 228px;
+    height: 56px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+}
+
+.form-select:focus {
+    border-color: #999;
+}
+
+.form-note {
+    font-size: 12px;
+    color: #999;
+    margin-top: 4px;
+}
+
+.birthday-note {
+    font-size: 16px;
+    color: #717171;
+    margin-top: 8px;
+    line-height: 1.4;
+}
+
+.profile-section-second-title {
+    font-family: Nunito Sans;
+    font-weight: 400;
+    font-size: 16px;
+    color: #717171;
+    text-transform: uppercase;
+}
+
+
+.user-bookings-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.booking-card {
+    flex: 1 1 800px;
+    max-width: 800px;
+    border: 1px solid #DDDDDD;
+    border-radius: 13px;
+
+    box-shadow: 0px 4px 69px 0px #0000000D;
+    box-shadow: 0px 1px 8px 0px #00000014;
+}
+
+.booking-image {
+    max-width: 320px;
+    border-radius: 13px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.booking-details {
+    display: inline-block;
+    flex: 1;
+    padding: 0px 0px 10px 30px;
+}
+
+.booking-title {
+    font-family: Nunito Sans;
+    font-weight: 700;
+    font-size: 20px;
+    vertical-align: middle;
+    color: #222222;
+}
+
+.booking-description {
+    font-family: Nunito Sans;
+    font-weight: 400;
+    font-size: 16px;
+    vertical-align: middle;
+    color: #717171;
+}
+
+.booking-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    color: #555;
+}
+
+.free-cancel {
+    color: #6a00ff;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+.booking-meta {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.booking-meta-details-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.booking-meta-details {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    border: 1px solid #DDDDDD;
+    border-radius: 13px;
+}
+
+.booking-meta-details-content {
+    width: 100%;
+    padding: 10px 20px 0px 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.booking-meta-details-image {
+    width: 24px;
+    height: 24px;
+}
+
+.booking-meta-details-title {
+    font-family: Nunito Sans;
+    font-weight: 400;
+    font-size: 16px;
+    vertical-align: middle;
+    color: #717171;
+    width: 100%;
+}
+
+.booking-meta-details-button-container {
+    width: 174px;
+    height: 96px;
+    display: flex;
+    border-radius: 13px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    border: 1px solid #581ADB;
+}
+
+.booking-meta-details-button-text {
+    font-family: Nunito Sans;
+    font-weight: 700;
+    font-size: 16px;
+
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: #581ADB;
+}
+
+#account-small-text-container {
+    margin-top: 10px;
+}
+
+.account-small-text {
+    font-family: Nunito Sans;
+    font-weight: 400;
+    font-size: 16px;
+    vertical-align: middle;
+    color: #717171;
+    margin-right: 10px;
+}
+
+#purple-text {
+    color: #581ADB;
+}
+
+.potom-pridumayu {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 232px;
+    border-radius: 13px;
+    border: 1px solid #DDDDDD;
+}
+
+.potom-pridumayu-text {
+    font-family: Nunito Sans;
+    font-weight: 400;
+    font-size: 16px;
+    color: #717171;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 300px;
+    padding: 16px;
+}
+
+.type-debit-card-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.input-container {
+    height: 36px;
+    padding: 10px 20px 10px 16px;
+    border: 1px solid #ccc;
+    border-radius: 64px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+    font-family: Nunito Sans;
+    font-weight: 400;
+    font-size: 16px;
+    color: #717171;
+}
+
+#select-card-type {
+    height: 58px;
+}
+
+.short-input {
+    width: 150px;
+}
+
+.no-card-link {
+    color: #7e22ce;
+    /* фиолетовый */
+    font-size: 14px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.no-card-link:hover {
+    text-decoration: underline;
+}
+
+.left-side-content {
+    padding: 10px 16px;
+}
+
+.payment-info {
+    max-width: 592px;
+    margin-top: 30px;
+}
+
+.payment-info-title {
+    font-family: Nunito Sans;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #717171;
+}
+
+.privacy-policy-link {
+    color: #581ADB;
+    font-family: Nunito Sans;
+    font-weight: 400;
+    font-size: 16px;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+
+/* -------- */
+/* General Section styling */
+
+
+/* Newsletter info container (top row) */
+.newsletter-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.newsletter-info-text p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #717171;
+    max-width: 600px;
+    margin: 0 0 20px;
+    line-height: 1.5;
+}
+
+.newsletter-subscribe-button {
+    background-color: #581ADB;
+    color: #fff;
+    border: none;
+    border-radius: 60px;
+    padding: 10px 20px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.newsletter-subscribe-button:hover {
+    background-color: #4509a0;
+}
+
+/* Контейнер для карточек */
+.newsletter-cards-container {
+    display: flex;
+    flex-wrap: no-wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Карточка новости */
+.newsletter-card {
+    background-color: #fff;
+    border: 1px solid #DDDDDD;
+    border-radius: 13px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    height: 544px;
+    box-shadow: 0px 4px 69px 0px #0000000D;
+
+    box-shadow: 0px 1px 8px 0px #00000014;
+
+}
+
+/* Контейнер для изображения с фиксированными размерами */
+.newsletter-card-image-container {
+    height: 232px;
+    /* фиксированная высота изображения */
+    overflow: hidden;
+    border-radius: 13px;
+    margin-bottom: 12px;
+}
+
+/* Изображение карточки (растягивается до размеров контейнера) */
+.newsletter-card-image {
+    width: 100%;
+    height: 232px;
+    object-fit: cover;
+    border-radius: 13px;
+}
+
+.newsletter-card-content {
+    padding: 10px 25px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Заголовок карточки */
+.newsletter-card-title {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #222222;
+    margin: 10px 0;
+}
+
+/* Описание карточки */
+.newsletter-card-description {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #717171;
+    margin: 10px 0;
+    flex-grow: 1;
+    height: 170px;
+}
+
+/* Метка с радио-кнопкой */
+.newsletter-card-label {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #717171;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.newsletters-info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.newsletters-info-container-text {
+    border: 1px solid #DDDDDD;
+    border-radius: 13px;
+    max-width: 576px;
+}
+
+.newsletters-info-text {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #717171;
+    padding: 10px 10px 10px 16px;
+}
+
+.newsletters-info-image-container {
+    width: 576px;
+    height: 232px;
+    overflow: hidden;
+    margin-right: 10px;
+    border-radius: 13px;
+    box-shadow: 0px 4px 69px 0px #0000000D;
+}
+
+.newsletters-info-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Контейнер для двух колонок */
+.security-section-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    flex-direction: column;
+}
+
+/* Левая колонка */
+.security-left-column {
+    padding: 20px 25px;
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border: 1px solid #DDDDDD;
+    max-width: 100%;
+    border-radius: 13px;
+    box-shadow: 0px 4px 69px 0px #0000000D;
+
+    box-shadow: 0px 1px 8px 0px #00000014;
+
+}
+
+/* Обёртка для каждого вопроса/поля */
+.security-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Лейблы и небольшие заголовки */
+.security-label {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #717171;
+    margin: 0;
+}
+
+/* Контейнер для поля ввода и ссылки */
+.security-input-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Поле ввода (только чтение) */
+.security-text-input {
+    border: 1px solid #ccc;
+    border-radius: 64px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    color: #717171;
+    outline: none;
+    width: 345px;
+    height: 56px;
+    padding-left: 25px;
+}
+
+.security-text-input:focus {
+    border-color: #999;
+}
+
+/* Ссылка "Change" и "Restore password" */
+.security-change-link,
+.security-restore-link {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    color: #581ADB;
+    text-decoration: none;
+    white-space: nowrap;
+    /* чтобы не разрывалась строка */
+}
+
+.security-change-link:hover,
+.security-restore-link:hover {
+    text-decoration: underline;
+}
+
+/* Правая колонка (текст) */
+.security-right-column {
+    flex: 1;
+    /* занимает оставшееся пространство */
+    min-width: 300px;
+    max-width: 592px;
+    /* чтобы колонка не сжималась слишком узко */
+}
+
+.security-right-column p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #717171;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+/* Ссылка "See privacy policy" */
+.privacy-policy-link {
+    color: #581ADB;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.privacy-policy-link:hover {
+    text-decoration: underline;
+}
+
+/* ------------------------ */
+@media (max-width: 480px) {
+    .profile-section {
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .nav-container-profile {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+        padding: 8px 16px;
+    }
+
+    .nav-container-profile::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav-element-container {
+        flex: 0 0 auto;
+    }
+
+    /* Инфо о пользователе */
+    .data-content {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .left-side-container {
+        flex: 0 1;
+    }
+
+    .user-photo {
+        display: inline-block;
+        width: 189px;
+        border-radius: 13px;
+        object-fit: cover;
+    }
+
+    .user-view-data {
+        margin-top: 5px;
+        margin-left: 10px;
+        display: inline-block;
+        padding: 0;
+        width: 80px;
+    }
+
+    .right-side-content {
+        padding: 16px;
+        margin-top: 0;
+    }
+
+    .buttom-full-width-container {
+        padding: 16px;
+    }
+
+    .user-data-form {
+        flex-direction: column;
+        gap: 16px;
+        padding: 0;
+    }
+
+    .form-column {
+        width: 85%;
+        flex: 0 1;
+        margin: 0 auto;
+    }
+
+    .form-group {
+        flex: 0 1;
+        justify-content: center;
+        margin-right: 15px;
+    }
+
+    .form-input {
+        padding-right: 0px;
+        width: 100%;
+        margin: 0 auto;
+        height: 40px;
+    }
+
+    .form-select {
+        width: 305%;
+    }
+
+    input[type="date"]::-webkit-inner-spin-button,
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        display: none;
+        -webkit-appearance: none;
+    }
+
+    .user-bookings-container {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .booking-card,
+    .booking-meta {
+        flex: 1 1 auto;
+        max-width: 100%;
+    }
+
+    .booking-image {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .booking-details {
+        display: block;
+        padding: 10px 16px;
+    }
+
+    .booking-meta-details-container {
+        gap: 16px;
+        margin-bottom: 16px;
+        justify-content: center;
+    }
+
+    .booking-meta-details-button-container {
+        margin-top: 0;
+        width: 183px;
+        justify-content: center;
+    }
+
+    .potom-pridumayu {
+        width: 90%;
+        margin: 0 auto;
+        height: auto;
+        padding: 16px;
+    }
+
+    .potom-pridumayu-image {
+        max-width: 64px;
+        height: auto;
+        margin-bottom: 16px;
+    }
+
+    .potom-pridumayu-text {
+        font-size: 14px;
+        padding: 0 8px;
+    }
+
+
+    /* Newsletters */
+    .newsletter-cards-container {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        width: 100vw;
+        margin-left: calc((100% - 100vw) / 2);
+        margin-right: calc((100% - 100vw) / 2);
+        padding: 0;
+        gap: 0px;
+        justify-content: flex-start;
+    }
+
+    .newsletter-cards-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .newsletter-card {
+        flex: 0 0 auto;
+        width: 272px;
+        margin: 0;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .newsletters-info-container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 0 16px;
+        justify-content: center;
+    }
+
+    .newsletters-info-container-text,
+    .newsletters-info-image-container {
+        width: 100%;
+        max-width: none;
+        margin: 0 auto;
+    }
+
+    .newsletters-info-image-container {
+        height: auto;
+    }
+
+    .newsletters-info-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .security-section-content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .security-left-column,
+    .security-right-column {
+        width: 100%;
+        max-width: none;
+        padding: 16px;
+        box-sizing: border-box;
+    }
+
+    .security-input-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        /* расстояние между input → label → link */
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* инпуты во всю ширину */
+    .security-text-input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .security-label {
+        font-size: 14px;
+        color: #717171;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10px;
+    }
+
+    .security-change-link,
+    .security-restore-link {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 14px;
+        color: #581ADB;
+        text-decoration: none;
+        /* прижмёт ссылку вправо */
+    }
+
+    .security-change-link:hover,
+    .security-restore-link:hover {
+        text-decoration: underline;
+    }
+
+    /* Privacy‑link вниз */
+    .security-right-column p:last-child {
+        margin-top: 8px;
+    }
+}
