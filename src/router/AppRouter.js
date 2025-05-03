@@ -3,8 +3,15 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { StartPage } from '../pages/Start'
 import { Profile } from '../pages/Profile'
 import { Main } from '../pages/Home'
-import { AccountSection, PaymentSection,TravelSection,NewslettersSection,SecuritySection } from '../pages/Profile'
+import {
+    AccountSection,
+    PaymentSection,
+    TravelSection,
+    NewslettersSection,
+    SecuritySection,
+} from '../pages/Profile'
 import { Hotel } from '../pages/Hotel'
+import { HotelsList } from '../pages/HotelsList'
 
 const router = createBrowserRouter([
     {
@@ -15,10 +22,14 @@ const router = createBrowserRouter([
                 index: true,
                 element: <Main />,
             },
+            {
+                path: 'hotels',
+                element: <HotelsList />,
+            },
         ],
     },
     {
-        path: '/profile', 
+        path: '/profile',
         element: <Profile />,
         children: [
             { index: true, element: <AccountSection /> },

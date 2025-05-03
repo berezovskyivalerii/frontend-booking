@@ -1,0 +1,155 @@
+/* тёмная полу‑прозрачная подложка */
+.sign-modal__overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+
+}
+
+/* «карточка» модального окна */
+.sign-modal__content {
+    width: min(90%, 432px);
+    background: #fff;
+    border-radius: 13px;
+    padding: 32px 40px;
+    position: relative;
+    font-family: 'Nunito Sans', sans-serif;
+    gap: 10px;
+    box-shadow: 0px 4px 69px 0px #0000000D;
+    box-shadow: 0px 1px 8px 0px #00000014;
+}
+
+.sign-modal__close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.sign-modal__title {
+    text-align: center;
+    margin: 0 0 40px;
+
+    font-family: Nunito Sans;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #581ADB;
+}
+
+.sign-modal__form input {
+    width: 100%;
+    height: 54px;
+    padding: 10px 10px 10px 24px;
+    border: 1px solid #DDDDDD;
+    border-radius: 64px;
+
+    font-family: Nunito Sans;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #717171;
+
+    margin-right: 0px;
+    box-sizing: border-box;
+    margin: 0 auto 15px; 
+}
+
+.sign-modal__primary {
+    width: 100%;
+    height: 56px;
+    border: none;
+    border-radius: 64px;
+    background: #DDDDDD;
+
+
+    font-family: Nunito Sans;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #717171;
+
+    cursor: pointer;
+    margin-bottom: 12px;
+}
+
+.sign-modal__text {
+    text-align: center;
+    margin: 0 0 24px;
+
+    font-family: Nunito Sans;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #717171;
+    margin-bottom: 50px;
+}
+
+.sign-modal__text a {
+    color: #581ADB;
+    text-decoration: none;
+}
+
+.sign-modal__oauth {
+    position: relative;
+    width: 100%;
+    height: 56px;
+    border: 1px solid #DDD;
+    border-radius: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #222;
+
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.sign-modal__oauth img {
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+.sign-modal__oauth:last-child {
+    margin-bottom: 50px;
+}
+
+@media (max-width: 600px) {
+    .sign-modal__content {
+        padding-left: 25px;
+        padding-right: 25px;
+        max-width: 398px;
+        box-sizing: border-box;
+    }
+
+    .sign-modal__form input {
+        width: 100%;
+    }
+    .sign-modal__oauth:last-child {
+        margin-bottom: 0px;
+    }
+}

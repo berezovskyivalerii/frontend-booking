@@ -9,6 +9,7 @@
 .nearby {
     padding: 24px 0 8px;
     text-align: center;
+    padding: 0px 16px;
 }
 
 /* ----- columns grid ----- */
@@ -71,16 +72,48 @@
     white-space: nowrap;
 }
 
-.google-map{
+.google-map {
     width: 100%;
     height: 208px;
     border-radius: 13px;
     margin-top: 60px;
 }
 
+.nearby__more {
+    display: none;
+    /* desktop – скрыта */
+    margin: 40px auto 0;
+    padding: 12px 40px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 28px;
+    font-size: 15px;
+    color: #717171;
+    cursor: pointer;
+    transition: background .2s;
+}
+
+.nearby__more:hover {
+    background: #fafafa;
+}
+
+
 /* ----- responsive tweaks ----- */
 @media (max-width: 480px) {
+    .nearby:not(.nearby--expanded) .nearby__column:nth-child(n+2) {
+        display: none;
+    }
+
     .nearby__item {
         font-size: 13px;
+    }
+    /* показываем кнопку */
+    .nearby__more {
+        display: block;
+    }
+
+    /* чуть меньше отступы внутри первой колонки */
+    .nearby__columns {
+        gap: 24px;
     }
 }

@@ -2,9 +2,9 @@ import React from 'react'
 import "./Comment.css"
 
 export function Comment(props) {
-    const { avatar, name, hotel, daysAgo, comment } = props;
+    const { avatar, name, hotel, daysAgo, comment, className } = props;
     return (
-        <div className="review-card">
+        <div className={`review-card ${className ?? ""}`}>
             <div className="review-header">
                 <div className="user-info">
                     <img src={avatar} alt={name} className="avatar" />

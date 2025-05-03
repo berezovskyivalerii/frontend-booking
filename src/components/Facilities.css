@@ -60,3 +60,60 @@
     margin-top: 2px;
     color: #717171;
 }
+
+.facilities__more {
+    display: none;
+    /* по умолчанию прячем (desktop) */
+    margin: 32px auto 0;
+    padding: 10px 28px;
+    border: 1px solid #ddd;
+    border-radius: 28px;
+    background: #fff;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 15px;
+    color: #717171;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.facilities__more:hover {
+    background: #fafafa;
+}
+
+
+/* мобильный: одна колонка + показываем кнопку */
+@media (max-width: 480px) {
+
+    .facilities__columns {
+        grid-template-columns: 1fr;
+        padding: 0px 15px;
+    }
+
+    .facilities__text {
+        display: inline-block;
+        max-width: 130px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .facilities:not(.facilities--expanded) .facilities__group--extra {
+        display: none;
+    }
+
+    .facilities:not(.facilities--expanded) .facilities__list li:nth-child(n + 5) {
+        display: none;
+    }
+
+    .facilities__more {
+        display: block;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .facilities__columns {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 32px 0px;
+    }
+}

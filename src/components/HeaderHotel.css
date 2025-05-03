@@ -1,4 +1,3 @@
-
 .header-hotel {
     display: flex;
     align-items: center;
@@ -108,7 +107,7 @@
 }
 
 .header-hotel__reviews-num {
-    color: #333;   
+    color: #333;
     color: #717171;
     font-size: 16px;
     font-weight: 400;
@@ -127,4 +126,102 @@
     margin-left: 4px;
     font-size: 16px;
     margin-top: 6px;
+}
+
+/* ============  mobile  ============ */
+@media (max-width: 640px) {
+
+    /* сам header теперь колоночный */
+    .header-hotel {
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+        /* расстояние между блоками */
+        padding: 32px 16px 24px;
+        /* сверху больше воздуха */
+    }
+
+    /* центральный блок уже не absolute */
+    .header-hotel__center {
+        position: static;
+        transform: none;
+        align-items: center;
+    }
+
+    /* звёзды чуть выше заголовка */
+    .header-hotel__stars {
+        margin-bottom: 8px;
+        gap: 6px;
+        font-size: 13px;
+    }
+
+    .header-hotel__title {
+        font-size: 28px;
+    }
+
+    .header-hotel__phone {
+        font-size: 14px;
+    }
+
+    /* блок оценки (score + reviews + check) идёт вторым */
+    .header-hotel__right {
+        order: 2;
+        gap: 32px;
+        /* равномерно между тройкой элементов */
+        justify-content: center;
+    }
+
+    .header-hotel__rating,
+    .header-hotel__check,
+    .header-hotel__score,
+    .header-hotel__reviews {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* кружок оценки чуть крупнее */
+    .header-hotel__score {
+        width: 48px;
+        height: 48px;
+        font-size: 18px;
+        border-width: 2px;
+    }
+
+    .header-hotel__reviews-label,
+    .header-hotel__reviews-num,
+    .header-hotel__check {
+        font-size: 16px;
+    }
+
+    /* стрелка вниз под словом “check” */
+    .header-hotel__arrow {
+        margin: 4px 0 0;
+    }
+
+    /* левый блок со значками идёт третьим */
+    .header-hotel__left {
+        order: 3;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .header-hotel__block {
+        flex-direction: column;
+        min-width: 80px;
+        padding: 14px 18px;
+    }
+
+    .header-hotel__icon {
+        font-size: 22px;
+    }
+
+    .header-hotel__label {
+        font-size: 16px;
+    }
+
+    /* убираем внутреннее «…»-переключатель в мобиле */
+    .header-hotel__more {
+        display: none;
+    }
 }

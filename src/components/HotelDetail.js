@@ -52,7 +52,12 @@ export function HotelDetail(props) {
                         <span className="per-night">per night</span>
                     </div>
                     <div className="info__location">
-                        <img src="../images/locationred.png" alt="location" className="icon-marker" /> {address}
+                        <img
+                            src="../images/locationred.png"
+                            alt="location"
+                            className="icon-marker"
+                        />{' '}
+                        {address}
                     </div>
                 </div>
 
@@ -71,7 +76,9 @@ export function HotelDetail(props) {
                 <hr className="info__divider" />
 
                 {/* Используем готовый компонент Comment */}
-                <Comment {...review} />
+                <div className="info__review">
+                    <Comment {...review} />
+                </div>
             </div>
         </div>
     )

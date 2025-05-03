@@ -4,6 +4,27 @@
     font-family: "Nunito Sans", sans-serif;
 }
 
+.comments{
+    margin-top: 30px;
+}
+.comments__more {
+    display: none;
+    /* desktop – скрыта  */
+    margin: 32px auto 0;
+    padding: 10px 32px;
+    border: 1px solid #ddd;
+    border-radius: 28px;
+    background: #fff;
+    font-size: 15px;
+    color: var(--gray-400);
+    cursor: pointer;
+    transition: background .2s;
+}
+
+.comments__more:hover {
+    background: #fafafa;
+}
+
 /* ===== FLEX-контейнер ===== */
 .comments__flex {
     display: flex;
@@ -19,6 +40,14 @@
 }
 
 @media (max-width: 480px) {
+    .comments__more {
+        display: block;
+    }
+
+    .comments:not(.comments--expanded) .review-card.extra {
+        display: none;
+    }
+
     .comments__flex {
         gap: 24px;
     }

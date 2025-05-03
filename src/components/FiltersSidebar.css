@@ -1,0 +1,174 @@
+:root {
+    --purple: #581ADB;
+    --gray-200: #e5e5e5;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.flt-sidebar__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.flt-sidebar__top {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ---------- боковая колонка ---------- */
+.flt-sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    flex-shrink: 0;
+    padding: 24px 16px;
+    overflow-y: auto;
+    border: 1px solid #DDDDDD;
+    border-radius: 13px;
+}
+
+.flt-map-btn {
+    width: 100%;
+    display: flex;
+    padding: 12px 20px;
+    margin-bottom: 24px;
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: 30px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+
+    justify-content: space-between;
+    align-items: center;
+    gap: 6px;
+    color: #EE0039;
+    cursor: pointer;
+}
+
+.flt-section {
+    border-bottom: 1px solid var(--gray-200);
+    padding-bottom: 18px;
+}
+
+.flt-section+.flt-section {
+    margin-top: 18px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.flt-section__head {
+    width: 100%;
+    padding: 8px 2px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    background: none;
+    border: none;
+    color: #717171;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flt-section__body {
+    padding: 4px 2px 2px 0;
+}
+
+/* ---------- списки чекбоксов ---------- */
+.flt-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: var(--gray-600);
+}
+
+.flt-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.flt-list label {
+    cursor: pointer;
+}
+
+.count {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #717171;
+}
+
+/* ---------- диапазон цены ---------- */
+input[type="range"] {
+    width: 100%;
+    accent-color: var(--purple);
+    cursor: pointer;
+}
+
+.range-values {
+    display: flex;
+    justify-content: space-between;
+    color: #717171;
+    margin-top: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+}
+
+.flt-toggle-btn {
+    padding: 10px 20px;
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: 28px;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    color: #000;
+    display: none;
+}
+
+@media (max-width: 959px) {
+    .flt-sidebar__top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        vertical-align: middle;
+        padding: 0px 20px;
+        margin-bottom: 20px;
+    }
+
+    .flt-sidebar {
+        display: none;
+    }
+
+    .flt-map-btn {
+        align-items: center;
+        vertical-align: middle;
+        margin: 0;
+    }
+
+    .flt-toggle-btn {
+        margin: 0;
+        padding: 12px 20px;
+        display: flex;
+        width: 100%;
+        vertical-align: middle;
+    }
+}

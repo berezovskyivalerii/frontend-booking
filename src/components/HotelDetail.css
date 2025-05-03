@@ -57,7 +57,8 @@
 }
 
 .hotel-detail__thumbs img {
-  width: 100%;
+  width: 160px;
+  flex: 0 0 160px;
   height: 120px;
   object-fit: cover;
   border-radius: 8px;
@@ -73,24 +74,21 @@
 
 /* ========== ИНФО-БЛОК ========== */
 .hotel-detail__info {
-  flex: 1.1;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  grid-template-areas:
-    "header book"
-    "desc desc"
-    "tags tags"
-    "divider divider"
-    "comment comment";
-  gap: 16px;
-}
-
-.info__header {
-  grid-area: header;
+  flex: 1 1 460px;          /* ширина столбца ≈ 460 px, но может ужаться */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 16px;
+  position: relative;
 }
+
+.info__top{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.info__header{ margin: 0; }
+
 
 .info__price {
   color: rebeccapurple;
@@ -115,8 +113,10 @@
 }
 
 .info__book {
-  grid-area: book;
-  align-self: start;
+  position: absolute;
+  top: 0;  
+  right: 0;
+  align-self: auto; 
   width: 181px;
   height: 72px;
   background: #581ADB;
@@ -180,6 +180,98 @@
   margin: 0;
 }
 
-.review-card {
-  grid-area: comment;
+.info__review .review-card{
+  width: 332px;              /* ровно по макету              */
+  align-self: flex-start;    /* примыкает к левому краю col  */
+}
+
+/* ============  АДАПТИВ (≤ 640 px) =========== */
+@media (max-width: 640px) {
+
+  /* ▸ корневая обёртка становится колонкой  */
+  .hotel-detail {
+    flex-direction: column;
+    gap: 40px;
+    padding: 0px 15px;
+  }
+
+  /* ▸ галерея —
+       главное фото ↑, миниатюры ↓ в одну строку-скролл */
+  .hotel-detail__gallery {
+    width: 100%;
+  }
+
+  .hotel-detail__main {
+    aspect-ratio: 4 / 3;
+    /* чуть выше, чем 16 : 9 */
+  }
+
+  .hotel-detail__thumbs {
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .hotel-detail__thumbs img {
+    flex: 0 0 220px;
+    height: 160px;
+  }
+
+  /* ▸ инфо-блок перестраиваем:
+       всё в одну колонку, центрируем текст */
+  .hotel-detail__info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    position: static; 
+  }
+
+  /* Цена  +  “per night” */
+  .info__header {
+    align-items: center;
+  }
+
+  .info__price {
+    font-size: 34px;
+    text-align: center;
+    /* amount + per-night одним шрифтом */
+  }
+
+  .info__location {
+    justify-content: center;
+    font-size: 15px;
+  }
+
+  /* Кнопка BOOK по центру и шире */
+  .info__book {
+    font-size: 20px;
+    align-self: center;
+    position: static;
+    width: 200px;            /* ваши мобильные размеры */
+    height: 60px;
+    margin: 0 auto; 
+  }
+
+  /* Описание растягиваем на всю ширину */
+  .info__desc {
+    max-width: 95%;
+    text-align: left;
+  }
+
+  /* Теги — обтекание строкой */
+  .info__tags {
+    flex-wrap: wrap;
+    gap: 14px 24px;
+  }
+
+  /* Разделитель чуть короче */
+  .info__divider {
+    width: 90%;
+  }
+
+  .info__review .review-card{
+    width: 100%;
+    max-width: 332px;
+    margin: 0 auto;
+  }
 }

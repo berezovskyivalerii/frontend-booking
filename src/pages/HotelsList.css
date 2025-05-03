@@ -1,0 +1,23 @@
+.hotels-list-container {
+    display: flex;
+}
+
+.hotels-list {
+    flex: 1 1 auto;
+    padding: 0px 32px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+@media (max-width: 640px) {
+    .hotels-list-container{
+        flex-direction: column;
+    }
+
+    .hotels-list{
+        padding: 0px 20px;
+
+    }
+}

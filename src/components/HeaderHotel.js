@@ -1,8 +1,5 @@
 import React from 'react'
 import {
-    FaPlane,
-    FaCalendarAlt,
-    FaUsers,
     FaEllipsisH,
     FaStar,
     FaChevronDown,
