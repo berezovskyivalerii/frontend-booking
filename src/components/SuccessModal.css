@@ -1,0 +1,109 @@
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-title {
+    color: #581ADB;
+    margin-bottom: 34px;
+    margin-top: 0px;
+    font-family: Nunito Sans;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+
+}
+
+.modal-icon {
+    font-size: 48px;
+    color: #581ADB;
+    margin-bottom: 24px;
+}
+
+.modal-button {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    padding: 12px 0;
+    font-size: 16px;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.modal-button.primary {
+    background: #581ADB;
+    color: white;
+    border: none;
+
+    font-family: Nunito Sans;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+
+
+    width: 402px;
+    height: 56px;
+    top: 19px;
+    left: 37px;
+    border-radius: 60px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 24px;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.modal-button.secondary {
+    font-family: Nunito Sans;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    width: 402px;
+    height: 56px;
+    top: 19px;
+    left: 37px;
+    border-radius: 60px;
+    border-width: 1px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 24px;
+    gap: 10px;
+
+
+    background: transparent;
+    color: #581ADB;
+    border: 1px solid #581ADB;
+}

@@ -1,16 +1,26 @@
 import React, { useState } from 'react'
+import RegisterModal from './RegisterModal'
 import SignInModal from './SignInModal'
+import { useNavigate } from 'react-router-dom'
 import './Header.css'
 
 export function Header() {
     const [isSignInOpen, setSignInOpen] = useState(false)
+    const [isRegOpen, setRegOpen] = useState(false) // ← NEW
 
+    const navigate = useNavigate()
+
+    const handleSearch = () => {
+        navigate('/')
+    }
+
+    console.log('RegisterModal open state:', isRegOpen)
     return (
         <>
             <header className="header">
                 <div className="header-container">
                     {/* Заголовок слева */}
-                    <h1 className="title-header">
+                    <h1 className="title-header" onClick={handleSearch}>
                         Hotel for <span>you.</span>
                     </h1>
 
@@ -25,7 +35,7 @@ export function Header() {
 
                         {/* Кнопка Register (видна только на десктопе) */}
                         <div className="register-container">
-                            <button>Register</button>
+                            <p onClick={() => setRegOpen(true)}>Register</p>
                         </div>
 
                         {/* Кнопка Sign In (видна только на десктопе) */}
@@ -53,6 +63,14 @@ export function Header() {
             <SignInModal
                 isOpen={isSignInOpen}
                 onRequestClose={() => setSignInOpen(false)}
+                onSwitchToRegister={() => {
+                    setSignInOpen(false)
+                    setRegOpen(true)
+                }}
+            />
+            <RegisterModal
+                isOpen={isRegOpen}
+                onRequestClose={() => setRegOpen(false)}
             />
         </>
     )

@@ -12,24 +12,6 @@
     display: block;
 }
 
-.guest-review__value {
-    position: absolute;
-    top: 34%;
-    left: 50%;
-    translate: -50% -50%;
-
-
-    font-family: Nunito Sans;
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    vertical-align: middle;
-    color: #581ADB;
-    align-items: center;
-    pointer-events: none;
-}
-
 .guest-review__label {
     margin: 0;
     font-family: Nunito Sans;

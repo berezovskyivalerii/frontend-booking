@@ -3,17 +3,19 @@ import React from 'react'
 import Modal from 'react-modal'
 import './SignInModal.css'
 
-Modal.setAppElement('#root') 
-
-export default function SignInModal({ isOpen, onRequestClose }) {
+// SignInModal.jsx
+export default function SignInModal({
+    isOpen,
+    onRequestClose,
+    onSwitchToRegister,
+}) {
     return (
         <Modal
             isOpen={isOpen}
             onRequestClose={onRequestClose}
             overlayClassName="sign-modal__overlay"
             className="sign-modal__content"
-            closeTimeoutMS={150} // плавное исчезание
-        >
+            closeTimeoutMS={150}>
             <button className="sign-modal__close" onClick={onRequestClose}>
                 &times;
             </button>
@@ -29,7 +31,15 @@ export default function SignInModal({ isOpen, onRequestClose }) {
             </form>
 
             <p className="sign-modal__text">
-                Do not have an account? <a href="#">Register</a>
+                Do not have an account?{' '}
+                <a
+                    href="#"
+                    onClick={e => {
+                        e.preventDefault()
+                        onSwitchToRegister()
+                    }}>
+                    Register
+                </a>
             </p>
 
             <button className="sign-modal__oauth google">

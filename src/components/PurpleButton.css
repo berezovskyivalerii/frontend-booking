@@ -23,4 +23,6 @@
 
 .purple-button:hover {
     opacity: 0.95;
+    width: 265px;
+    height: 66px;
 }

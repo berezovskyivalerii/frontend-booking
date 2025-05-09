@@ -1,91 +1,102 @@
-/* тёмная полу‑прозрачная подложка */
-.sign-modal__overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, .4);
+/* overlay */
+.regOverlay {
+    background: rgba(0, 0, 0, 0.45);
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    position: fixed;
+    /* ← важно */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     z-index: 1000;
-
+    /* ← особенно важно */
 }
 
-/* «карточка» модального окна */
-.sign-modal__content {
-    width: min(90%, 432px);
+/* modal window */
+.reg {
+    width: min(430px, 92vw);
     background: #fff;
-    border-radius: 13px;
-    padding: 32px 40px;
+    border-radius: 12px;
+    padding: 32px 36px 48px;
     position: relative;
-    font-family: 'Nunito Sans', sans-serif;
-    gap: 10px;
-    box-shadow: 0px 4px 69px 0px #0000000D;
-    box-shadow: 0px 1px 8px 0px #00000014;
+    overflow: hidden;
 }
 
-.sign-modal__close {
+/* close btn */
+.reg__close {
     position: absolute;
-    top: 12px;
-    right: 12px;
-    border: none;
+    right: 16px;
+    top: 16px;
     background: none;
-    font-size: 24px;
+    border: none;
+    font-size: 22px;
     cursor: pointer;
 }
 
-.sign-modal__title {
-    text-align: center;
-    margin: 0 0 40px;
-
-    font-family: Nunito Sans;
-    font-weight: 800;
+.reg__title {
+    margin: 0 0 32px;
     font-size: 24px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    vertical-align: middle;
+    font-weight: 700;
+    text-align: center;
     color: #581ADB;
 }
 
-.sign-modal__form input {
+.reg__field {
+    display: block;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.reg__field input {
     width: 100%;
-    height: 54px;
-    padding: 10px 10px 10px 24px;
-    border: 1px solid #DDDDDD;
-    border-radius: 64px;
+    padding: 18px 24px;
+    border: 1px solid #ddd;
+    border-radius: 38px;
+    font-size: 15px;
+    outline: none;
+}
+
+.reg__field small {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #7a7a7a
+}
+
+.counter {
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #bbb;
+}
+
+.reg__policy {
+    display: block;
+    margin: 4px 15px 28px;
 
     font-family: Nunito Sans;
     font-weight: 400;
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0%;
-    vertical-align: middle;
     color: #717171;
-
-    margin-right: 0px;
-    box-sizing: border-box;
-    margin: 0 auto 15px;
 }
 
-.sign-modal__form-warning {
-    font-family: Nunito Sans;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0%;
-    vertical-align: middle;
-    color: #717171;
-    width: 70%;
-    margin-left: 15px;
-    margin-top: 0px;
+.reg__policy a {
+    color: #581ADB;
+    text-decoration: none;
 }
 
-.sign-modal__primary {
+.sign-modal__primary-reg {
     width: 100%;
     height: 56px;
     border: none;
     border-radius: 64px;
-    background: #DDDDDD;
-
+    background: #581ADB;
 
     font-family: Nunito Sans;
     font-weight: 700;
@@ -93,10 +104,10 @@
     line-height: 100%;
     letter-spacing: 0%;
     vertical-align: middle;
-    color: #717171;
+    color: #FFFFFF;
 
     cursor: pointer;
-    margin-bottom: 12px;
+    margin-bottom: 52px;
 }
 
 .sign-modal__text {
@@ -118,7 +129,7 @@
     text-decoration: none;
 }
 
-.sign-modal__oauth {
+.sign-modal__oauth-reg {
     position: relative;
     width: 100%;
     height: 56px;
@@ -138,7 +149,7 @@
     margin-bottom: 20px;
 }
 
-.sign-modal__oauth img {
+.sign-modal__oauth-reg img {
     position: absolute;
     left: 24px;
     top: 50%;
@@ -147,12 +158,12 @@
     height: 20px;
 }
 
-.sign-modal__oauth:last-child {
-    margin-bottom: 50px;
+.sign-modal__oauth-reg:last-child {
+    margin-bottom: 0px;
 }
 
-@media (max-width: 600px) {
-    .sign-modal__content {
+@media (max-width: 480px) {
+    .reg {
         padding-left: 25px;
         padding-right: 25px;
         max-width: 398px;
@@ -163,7 +174,7 @@
         width: 100%;
     }
 
-    .sign-modal__oauth:last-child {
-        margin-bottom: 0px;
+    .reg__policy {
+        text-align: center;
     }
 }

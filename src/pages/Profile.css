@@ -420,6 +420,9 @@ Header {
 
 #select-card-type {
     height: 58px;
+    padding: 10px 36px 10px 16px;
+    appearance: none;
+    margin-bottom: 30px;
 }
 
 .short-input {
@@ -989,5 +992,9 @@ Header {
     /* Privacy‑link вниз */
     .security-right-column p:last-child {
         margin-top: 8px;
+    }
+
+    #select-card-type{
+        margin-bottom: 0px;
     }
 }

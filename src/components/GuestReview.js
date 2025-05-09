@@ -1,4 +1,3 @@
-// GuestReview.jsx
 import React from 'react'
 import './GuestReview.css'
 
@@ -22,7 +21,6 @@ export default function GuestReview({
                 height={size}
                 className="guest-review__ring"
                 style={{ transform: 'rotate(0deg)' }}>
-                {/* фон */}
                 <circle
                     cx={size / 2}
                     cy={size / 2}
@@ -31,7 +29,6 @@ export default function GuestReview({
                     strokeWidth={stroke}
                     fill="transparent"
                 />
-                {/* прогресс */}
                 <circle
                     cx={size / 2}
                     cy={size / 2}
@@ -44,12 +41,20 @@ export default function GuestReview({
                     strokeLinecap="round"
                     style={{ transition: 'stroke-dashoffset 0.4s ease' }}
                 />
+
+                <text
+                    x="50%"
+                    y="54%"
+                    textAnchor="middle"
+                    dominantBaseline="middle"
+                    fill={color}
+                    fontSize="28px"
+                    fontWeight="600"
+                    fontFamily="Nunito Sans">
+                    {safeRating.toFixed(1)}
+                </text>
             </svg>
 
-            {/* число в центре */}
-            <span className="guest-review__value">{safeRating.toFixed(1)}</span>
-
-            {/* подпись снизу */}
             <p className="guest-review__label">{label}</p>
         </div>
     )

@@ -1,5 +1,6 @@
 import React from 'react'
-import "./NavigationBar.css"
+import { useNavigate } from 'react-router-dom'
+import './NavigationBar.css'
 
 function BackgroundImageNavigationBar(props) {
     const backgroundStyle = {
@@ -16,10 +17,15 @@ function BackgroundImageNavigationBar(props) {
 }
 
 export function NavigationBar(props) {
+    const navigate = useNavigate()
+
+    const handleSearch = () => {
+        navigate('/hotels')
+    }
     return (
         <section className="navigation-bar-container">
             <BackgroundImageNavigationBar url={props.url} />
-            
+
             <nav className="nav-container">
                 <div className="search-input-container">
                     <img src="./images/plane.png" alt="" />
@@ -43,8 +49,7 @@ export function NavigationBar(props) {
                     />
                     <img src="./images/arrows-switch.png" alt="" />
                 </div>
-
-                <button className="search-button">
+                <button className="search-button" onClick={handleSearch}>
                     <img src="./images/search-icon.png" alt="search icon" />
                 </button>
             </nav>
