@@ -21,8 +21,7 @@ booking/
 
 1. Клонируй репозиторий:
 ```bash
-git clone https://github.com/berezovskyivalerii/booking.git
-cd booking-frontend
+git clone https://github.com/berezovskyivalerii/frontend-booking.git
 ```
 
 2. Установите зависимости
