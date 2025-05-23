@@ -9,7 +9,6 @@ import './HeaderHotel.css'
 export function HeaderHotel() {
     return (
         <header className="header-hotel">
-            {/* Left blocks */}
             <div className="header-hotel__left">
                 {[
                     {
@@ -37,7 +36,6 @@ export function HeaderHotel() {
                 ))}
             </div>
 
-            {/* Center title & stars */}
             <div className="header-hotel__center">
                 <div className="header-hotel__stars">
                     {[...Array(4)].map((_, i) => (
@@ -48,7 +46,6 @@ export function HeaderHotel() {
                 <div className="header-hotel__phone">(380) 555‑0103</div>
             </div>
 
-            {/* Right rating */}
             <div className="header-hotel__right">
                 <div className="header-hotel__score">7.9</div>
                 <div className="header-hotel__reviews">

@@ -14,12 +14,12 @@ export default function SuccessModal({ isOpen, onClose }) {
         <div className="modal-overlay">
             <div className="modal">
                 <button className="modal-close" onClick={onClose}>
-                    <img src="./images/iconsax.png" alt="close" />
+                    <img src="../images/iconsax.png" alt="close" />
                 </button>
                 <h2 className="modal-title">All done!</h2>
 
                 <div className="modal-icon">
-                    <img src="./images/success.png" alt="success" />
+                    <img src="../images/success.png" alt="success" />
                 </div>
 
                 <button className="modal-button primary" onClick={handleProfile}>

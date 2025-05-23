@@ -107,3 +107,20 @@
     color: #581ADB;
     border: 1px solid #581ADB;
 }
+
+@media (max-width: 480px) {
+    .modal {
+        padding-left: 25px;
+        padding-right: 25px;
+        max-width: 398px;
+        box-sizing: border-box;
+    }
+    .modal-button.secondary,
+    .modal-button.primary {
+        width: 100%;
+    }
+
+    .reg__policy {
+        text-align: center;
+    }
+}

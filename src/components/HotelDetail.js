@@ -1,16 +1,17 @@
 import React, { useState } from 'react'
-import { FaChevronLeft, FaChevronRight, FaMapMarkerAlt } from 'react-icons/fa'
+import { FaChevronLeft, FaChevronRight} from 'react-icons/fa'
 import { Comment } from './Comment'
 import './HotelDetail.css'
+import { Link } from 'react-router-dom'
 
 export function HotelDetail(props) {
     const {
-        images, // массив URL картинок
-        price, // число, например 85
-        address, // строка, например "LVIV STREET 8 | KYIV"
-        description, // текст описания
-        tags, // массив объектов { icon: ReactNode, label: string }
-        review, // объект props для <Comment {...review}/>
+        images, 
+        price,
+        address,
+        description,
+        tags,
+        review,
     } = props
 
     const [current, setCurrent] = useState(0)
@@ -20,7 +21,6 @@ export function HotelDetail(props) {
 
     return (
         <div className="hotel-detail">
-            {/* Галерея */}
             <div className="hotel-detail__gallery">
                 <div className="hotel-detail__main">
                     <img src={images[current]} alt="" />
@@ -44,7 +44,6 @@ export function HotelDetail(props) {
                 </div>
             </div>
 
-            {/* Информация */}
             <div className="hotel-detail__info">
                 <div className="info__header">
                     <div className="info__price">
@@ -61,7 +60,9 @@ export function HotelDetail(props) {
                     </div>
                 </div>
 
-                <button className="info__book">BOOK</button>
+                <Link to="/bookingme" className="info__book">
+                    BOOK
+                </Link>
 
                 <p className="info__desc">{description}</p>
 
@@ -75,7 +76,6 @@ export function HotelDetail(props) {
 
                 <hr className="info__divider" />
 
-                {/* Используем готовый компонент Comment */}
                 <div className="info__review">
                     <Comment {...review} />
                 </div>

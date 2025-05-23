@@ -1,0 +1,124 @@
+.confirmation-page {
+    padding: 40px 16px;
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.confirmation-box {
+    background: white;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    width: 100%;
+}
+
+.heading_h2 {
+    font-family: Nunito Sans;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    margin-bottom: 4%;
+}
+
+.confirmation-box .purple {
+    color: #581adb;
+}
+
+.confirmation-box .thanks {
+    font-family: Nunito Sans;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    margin-bottom: 0%;
+}
+
+.confirmed {
+    font-family: Nunito Sans;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    display: flex;
+    color: #581ADB;
+    gap: 8px;
+    align-items: center;
+}
+
+.confirmation-details {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 15px;
+    color: #444;
+}
+
+.confirmation-details li::before {
+    content: '✔';
+    color: #717171;
+    margin-right: 15px;
+}
+
+.confirmation-details a {
+    text-decoration: none;
+    font-family: Nunito Sans;
+    font-weight: 400;
+    font-size: 16px;
+    color: #717171;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+}
+
+.download-btn {
+    max-width: 402px;
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 999px;
+    background-color: #581adb;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    cursor: pointer;
+    text-transform: none;
+    justify-content: center;
+}
+
+.hotel-info {
+    text-align: center;
+}
+
+.hotel-name {
+    color: #581adb;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.phone {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.route-link {
+    color: #581adb;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+}

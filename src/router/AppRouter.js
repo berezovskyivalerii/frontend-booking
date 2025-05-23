@@ -12,6 +12,10 @@ import {
 } from '../pages/Profile'
 import { Hotel } from '../pages/Hotel'
 import { HotelsList } from '../pages/HotelsList'
+import BookingPerson from '../components/BookingPerson'
+import BookingInfo from '../components/BookingInfo'
+import { BookingPayment } from '../components/BookingPayment'
+import BookingConfirmation from '../components/BookingConfirmation'
 
 const router = createBrowserRouter([
     {
@@ -44,6 +48,22 @@ const router = createBrowserRouter([
         path: '/hotel',
         element: <Hotel />,
     },
+    {
+        path: '/bookingme',
+        element: <BookingPerson />,
+    },
+    {
+        path: '/bookinginfo',
+        element: <BookingInfo />,
+    },
+    {
+        path:'/bookingpayment',
+        element: <BookingPayment/>
+    },
+    {
+        path:"/bookingconfirmation",
+        element:<BookingConfirmation/>
+    }
 ])
 
 export function AppRouter() {

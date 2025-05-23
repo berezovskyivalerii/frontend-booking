@@ -4,7 +4,6 @@ import './RegisterModal.css'
 import SuccessModal from './SuccessModal'
 
 export default function RegisterModal({ isOpen, onRequestClose }) {
-    /* простая локальная валидация */
     const [email, setEmail] = useState('')
     const [pwd, setPwd] = useState('')
     const [repeat, setRepeat] = useState('')
@@ -70,7 +69,6 @@ export default function RegisterModal({ isOpen, onRequestClose }) {
                 onClose={() => setShowSuccess(false)}
             />
 
-            {/* ----- social ----- */}
             <button className="sign-modal__oauth-reg google">
                 <img src="../images/logos_google-icon.png" alt="" />
                   Sign In with Google

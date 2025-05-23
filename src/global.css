@@ -2,6 +2,13 @@
     margin-bottom: 200px;
 }
 
-.page-section{
+.page-section {
     margin-top: 50px;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: none;
 }

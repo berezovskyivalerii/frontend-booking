@@ -76,7 +76,6 @@ export function LargeHotelCard({
             </div>
 
             <aside className="hotel__aside">
-                {/* rating on top */}
                 <div className="hotel__rating hotel__rating--desktop">
                     <span className="hotel__score">{score}</span>
                     <span className="hotel__reviews">

@@ -113,6 +113,7 @@
 }
 
 .info__book {
+  text-decoration: none;
   position: absolute;
   top: 0;  
   right: 0;
@@ -128,6 +129,9 @@
   font-weight: 700;
   font-size: 24px;
   text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .info__location {
