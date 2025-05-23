@@ -19,26 +19,21 @@ export function Header() {
         <>
             <header className="header">
                 <div className="header-container">
-                    {/* Заголовок слева */}
                     <h1 className="title-header" onClick={handleSearch}>
                         Hotel for <span>you.</span>
                     </h1>
 
-                    {/* Правый блок с иконками и кнопками */}
                     <div className="content-header">
-                        {/* Иконка языка (видна и на десктопе, и на мобильном) */}
                         <img
                             src="../images/language-eng.png"
                             alt="language"
                             className="language-icon"
                         />
 
-                        {/* Кнопка Register (видна только на десктопе) */}
                         <div className="register-container">
                             <p onClick={() => setRegOpen(true)}>Register</p>
                         </div>
 
-                        {/* Кнопка Sign In (видна только на десктопе) */}
                         <div
                             className="sign-in-container"
                             onClick={() => setSignInOpen(true)}>

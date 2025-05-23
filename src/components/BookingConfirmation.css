@@ -13,7 +13,7 @@
     background: white;
     border-radius: 12px;
     padding: 32px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 4px 69px 0px #0000000D, 0px 1px 8px 0px #00000014;
     width: 100%;
 }
 
@@ -121,4 +121,23 @@
     font-weight: 500;
     font-size: 14px;
     text-decoration: none;
+}
+
+@media (max-width: 480px) {
+    .confirmation-box {
+        width: 100%;
+        padding: 32px;
+        box-sizing: border-box;
+    }
+
+    .confirmed {
+        align-items: flex-start;
+    }
+
+    .download-btn {
+        margin-top: 10px;
+        padding-top: 18px;
+        padding-bottom: 18px;
+
+    }
 }

@@ -1,4 +1,3 @@
-/* ----- variables ------ */
 :root {
     --purple: #581ADB;
     --gray-50: #fafafa;
@@ -8,7 +7,6 @@
     font-family: "Nunito Sans", sans-serif;
 }
 
-/* ----- card layout ------ */
 .hotel-card-medium {
     display: flex;
     background: #fff;
@@ -19,7 +17,6 @@
     gap: 24px;
 }
 
-/* image */
 .hotel-card__img {
     flex: 0 0 320px;
     max-width: 320px;
@@ -27,13 +24,12 @@
     object-fit: cover;
 }
 
-/* body */
 .hotel-card__body {
     flex: 1 1 auto;
     padding: 24px 0px 18px 0px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 14px;
 }
 
 .hotel-card__title {
@@ -47,7 +43,6 @@
     color: #222222;
 }
 
-/* feature list */
 .hotel-card__feature-list,
 .hotel-card__amenities {
     list-style: none;
@@ -55,7 +50,7 @@
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 12px 32px;
+    gap: 8px 22px;
     font-size: 14px;
     color: var(--gray-400);
 }
@@ -96,7 +91,6 @@
     vertical-align: middle;
 }
 
-/* cancellation */
 .hotel-card__cancellation {
     margin: 0;
     font-size: 14px;
@@ -107,7 +101,6 @@
     margin-bottom: 0px;
 }
 
-/* sidebar */
 .hotel-card__sidebar {
     flex: 0 0 120px;
     padding: 24px 16px;
@@ -123,7 +116,6 @@
     color: var(--purple);
 }
 
-/* buttons */
 .btn {
     width: 100%;
     min-width: 110px;
@@ -195,5 +187,13 @@
 
     .btn {
         max-width: 240px;
+    }
+
+    .hotel-card__amenities {
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+    .hotel-card__cancellation{
+        margin-bottom: 20px;
     }
 }

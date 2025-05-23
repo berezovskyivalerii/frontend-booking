@@ -1,14 +1,10 @@
-import React from 'react'
 import { MediumHotelCardPreview } from './MediumHotelCardPreview'
 import './BookingPerson.css'
-import { Header } from './Header'
 import { Link } from 'react-router-dom'
-import BookingInfo from './BookingInfo'
 
 export default function BookingPerson() {
     return (
         <div>
-            <Header />
             <main className="booking-page">
                 <MediumHotelCardPreview
                     image="../images/hotel-card1.jpg"
@@ -85,7 +81,7 @@ export default function BookingPerson() {
                         </label>
                     </div>
                 </div>
-                <Link to="/bookinginfo" type="submit" className="btn btn--primary full-width">
+                <Link to="/book/info" type="submit" className="btn btn--primary full-width">
                     Continue
                 </Link>
             </main>

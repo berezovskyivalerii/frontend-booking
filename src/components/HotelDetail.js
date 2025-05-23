@@ -1,23 +1,22 @@
 import React, { useState } from 'react'
-import { FaChevronLeft, FaChevronRight} from 'react-icons/fa'
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import { Comment } from './Comment'
 import './HotelDetail.css'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export function HotelDetail(props) {
-    const {
-        images, 
-        price,
-        address,
-        description,
-        tags,
-        review,
-    } = props
+    const navigate = useNavigate()
+
+    const { images, price, address, description, tags, review } = props
 
     const [current, setCurrent] = useState(0)
 
     const prev = () => setCurrent((current - 1 + images.length) % images.length)
     const next = () => setCurrent((current + 1) % images.length)
+
+    const handleBook = () => {
+        navigate('/book')
+    }
 
     return (
         <div className="hotel-detail">
@@ -60,9 +59,11 @@ export function HotelDetail(props) {
                     </div>
                 </div>
 
-                <Link to="/bookingme" className="info__book">
+                <button
+                    onClick={handleBook}
+                    className="info__book">
                     BOOK
-                </Link>
+                </button>
 
                 <p className="info__desc">{description}</p>
 

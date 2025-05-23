@@ -16,6 +16,7 @@ import BookingPerson from '../components/BookingPerson'
 import BookingInfo from '../components/BookingInfo'
 import { BookingPayment } from '../components/BookingPayment'
 import BookingConfirmation from '../components/BookingConfirmation'
+import { Book } from '../pages/Book'
 
 const router = createBrowserRouter([
     {
@@ -49,21 +50,16 @@ const router = createBrowserRouter([
         element: <Hotel />,
     },
     {
-        path: '/bookingme',
-        element: <BookingPerson />,
+        path: '/book',
+        element: <Book/>,
+        children: [
+            { index: true, element: <BookingPerson /> },
+            { index: 'me', element: <BookingPerson /> },
+            { path: 'info', element: <BookingInfo /> },
+            { path: 'payment', element: <BookingPayment /> },
+            { path: 'confirmation', element: <BookingConfirmation /> },
+        ],
     },
-    {
-        path: '/bookinginfo',
-        element: <BookingInfo />,
-    },
-    {
-        path:'/bookingpayment',
-        element: <BookingPayment/>
-    },
-    {
-        path:"/bookingconfirmation",
-        element:<BookingConfirmation/>
-    }
 ])
 
 export function AppRouter() {

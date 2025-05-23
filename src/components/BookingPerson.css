@@ -129,7 +129,7 @@
     color: white;
     border: none;
     cursor: pointer;
-    
+
 }
 
 .btn.btn--secondary {
@@ -148,21 +148,54 @@
     cursor: pointer;
 }
 
-@media (max-width: 600px) {
-    .booking-form {
-        padding: 16px;
+@media (max-width: 480px) {
+    .booking-page {
+        padding: 12px;
+        width: 93%;
+        margin-bottom: 30px;
     }
 
-    .btn.full-width {
-        font-size: 14px;
+    .booking-form {
+        padding: 16px;
+        box-sizing: border-box;
+        border-radius: 12px;
+    }
+
+    .form-grid {
+        gap: 12px;
     }
 
     .row {
         flex-direction: column;
         align-items: stretch;
+        gap: 8px;
+    }
+
+    .input-booking {
+        max-width: 100%;
     }
 
     .side-text {
-        max-width: 100%;
+        font-size: 13px;
+        color: #777;
+    }
+
+    .options-container {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 16px;
+    }
+
+    .option {
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    .btn.full-width {
+        box-sizing: border-box;
+        text-transform: none;
+        font-size: 15px;
+        margin-top: 20px;
+        border-radius: 64px;
     }
 }
