@@ -1,9 +1,7 @@
-// src/components/SignInModal.jsx
 import React from 'react'
 import Modal from 'react-modal'
 import './SignInModal.css'
 
-// SignInModal.jsx
 export default function SignInModal({
     isOpen,
     onRequestClose,
@@ -15,7 +13,7 @@ export default function SignInModal({
             onRequestClose={onRequestClose}
             overlayClassName="sign-modal__overlay"
             className="sign-modal__content"
-            closeTimeoutMS={150}>
+            closeTimeoutMS={0}>
             <button className="sign-modal__close" onClick={onRequestClose}>
                 &times;
             </button>
